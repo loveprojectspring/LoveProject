@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+#logo {
+    max-width: 100%;
+    height: 4rem;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0rem 2rem;
+    font-weight: 600;
+    
+
+    
+}
+nav a:hover {
+    color: #f089c0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+
+}
+header {
+    background-color: #f089c0;
+    display: flex;
+    align-items: center;
+    padding: 0rem 2rem;
+    height: 10vh;
+    margin: 0;
+    box-shadow: 1px 9px 12px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 9px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 9px 12px -4px rgba(0,0,0,0.75);}
+main {
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    flex-flow: column;
+    color: #050505;
+
+}
+#emptyHeart {
+    width: 400px;
+   
+
+}
+#heartRight {
+    fill:#FF6647;
+    
+}
+#heartLeft {
+    fill: #E35336;
+}
+#heartText {
+    font-size: 10rem;
+    font-weight: 600;
+}
+footer {
+    background-color: #050505;
+    height: 10vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p {
+    margin: 0;
+}
