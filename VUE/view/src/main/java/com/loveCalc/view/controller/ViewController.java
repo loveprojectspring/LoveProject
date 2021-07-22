@@ -1,5 +1,6 @@
 package com.loveCalc.view.controller;
 
+import com.loveCalc.view.BDD.AppeleBDD;
 import com.loveCalc.view.dto.Couple;
 import com.loveCalc.view.dto.Person;
 import org.springframework.http.MediaType;
@@ -17,7 +18,7 @@ import java.util.Random;
 @RequestMapping("/")
 public class ViewController {
     Couple matched = new Couple();
-    List<Couple> couples = new ArrayList<Couple>();
+    List<Couple> couples =  AppeleBDD.getListCouple();
 
     @GetMapping
     public String homePage(Model model) {

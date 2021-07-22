@@ -22,10 +22,13 @@
             <th>First person</th>
             <th>Second person</th>
             <th>Percentage %</th>
+            <th>Message</th>
             <tr th:each="couple: ${couples}">
                 <td><span  th:text="${couple.firstPerson}"></span></td>
                 <td><span th:text="${couple.secondPerson}"></span> </td>
                 <td><span  th:text="${couple.percentage}"></span>%</td>
+                <td><span  th:text="${couple.getResultMessage()}"></span></td>
+
             </tr>
         </table>
     </div>
