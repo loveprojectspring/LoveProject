@@ -6,18 +6,24 @@ spring :
  # cloud:
    # gateway:
    #   routes:
-    #   - id: direct_route
-     #    uri: http://127.0.0.1:8080
+    #   - id: Vue
+     #    uri: http://127.0.0.1:8400
       #   predicates:
-       #   - Path=/realroute/**
+       #   - Path=/Vue/**
         # filters:
-         # - RewritePath=/realroute/(?<segment>.*), /sujet/$\{segment}
-     #  - id: lb_route
-      #   uri: lb://hugold
+         # - RewritePath=/Vue/(?<segment>.*), /sujet/$\{segment}
+     #  - id: BDD
+      #   uri: lb://BDD
        #  predicates:
-       #   - Path=/lbroute/**
+       #   - Path=/BDD/**
        #  filters:
-       #   - RewritePath=/lbroute/(?<segment>.*), /sujet/$\{segment}
+       #   - RewritePath=/BDD/(?<segment>.*), /sujet/$\{segment}
+     #  - id: LoveAPI
+      #   uri: lb://LoveAPI
+       #  predicates:
+       #   - Path=/response/**
+       #  filters:
+       #   - RewritePath=/LoveAPI/(?<segment>.*), /sujet/$\{segment}
 eureka :
   client : 
     service-url : 
