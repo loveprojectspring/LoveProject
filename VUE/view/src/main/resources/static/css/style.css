@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
 * {
     font-family: 'Lato', sans-serif;
 
@@ -13,6 +13,16 @@ body {
     height: 4rem;
 
 
+}
+.result {
+    width: 60vw;
+}
+.result h3 {
+    text-align: center;
+}
+.coupleText {
+    font-family: 'Fuggles', cursive;
+    font-size: 4rem;
 }
 nav a {
     text-decoration: none;

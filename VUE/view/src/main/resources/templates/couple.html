@@ -22,10 +22,10 @@
             <th>First person</th>
             <th>Second person</th>
             <th>Percentage %</th>
-            <tr>
-                <td>Person1</td>
-                <td>Person2</td>
-                <td>93%</td>
+            <tr th:each="couple: ${couples}">
+                <td><span  th:text="${couple.firstPerson}"></span></td>
+                <td><span th:text="${couple.secondPerson}"></span> </td>
+                <td><span  th:text="${couple.percentage}"></span>%</td>
             </tr>
         </table>
     </div>

@@ -25,11 +25,11 @@
     </form>
   </div>
     <div class="result">
-        <h3>Result:</h3>
+        <h3>Result</h3>
 
         <div class="matched">
             <div class="firstMatch">
-                <h3> <span th:text="${couple.firstPerson}"></span></h3>
+                <h3> <span class="coupleText"  th:text="${couple.firstPerson}"></span></h3>
             </div>
             <?xml version="1.0" encoding="iso-8859-1"?>
             <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -62,7 +62,7 @@
 	c0,44.458,13.452,88.335,39.981,130.418c21.009,33.324,50.227,65.585,86.845,95.889c62.046,51.348,123.114,78.995,125.683,80.146
 	c2.203,0.988,4.779,0.988,6.981,0c0.689-0.308,5.586-2.524,13.577-6.588C251.254,463.709,206.371,438.825,160.959,401.243z"
                 />
-                <text  x="120" y="300" class="small heartText" th:text="${couple.percentage} + '%'"></text>
+                <text  x="120" y="300" id="percentageText"  class="small heartText" th:text="${couple.percentage} + '%'"></text>
                 <g></g>
                 <g></g>
                 <g></g>
@@ -80,7 +80,7 @@
                 <g></g>
         </svg>
             <div class="secondMatch">
-                <h3> <span th:text="${couple.secondPerson}"></span> </h3>
+                <h3> <span class="coupleText" th:text="${couple.secondPerson}"></span> </h3>
 
             </div>
         </div>
@@ -90,5 +90,31 @@
 
   <p>Copyrights© 2021 | Cefim students </p>
 </footer>
+
+<script>
+    let percentageText = document.getElementById("percentageText");
+    let  percentageValue = percentageText.textContent;
+
+    if(!percentageValue || percentageValue == 0){
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        const obj = document.getElementById("percentageText");
+        animateValue(percentageText, percentageValue, 0, 5000);
+    }
+
+
+
+</script>
 </body>
 </html>
