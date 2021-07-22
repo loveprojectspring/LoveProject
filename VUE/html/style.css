@@ -52,6 +52,13 @@ main {
     color: #050505;
 
 }
+
+.matched {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
 #emptyHeart {
     width: 400px;
    
@@ -78,4 +85,32 @@ footer {
 }
 p {
     margin: 0;
+}
+
+
+/* Couples Page  */
+
+.coupleList {
+    display: flex;
+    width: 90vw;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.coupleList table {
+    width: 50%;
+    text-align: left;
+    border: 1px solid black;
+}
+table td, table th {
+    padding:2rem;
+}
+table th {
+    font-size: larger;
+    color: #E35336 ;
+    text-transform: capitalize;
+}
+table tr :nth-child(odd) {
+    background-color: rgb(233, 233, 233);
 }
