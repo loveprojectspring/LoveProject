@@ -52,6 +52,13 @@ main {
     color: #050505;
 
 }
+
+.matched {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
 #emptyHeart {
     width: 400px;
 
@@ -64,7 +71,7 @@ main {
 #heartLeft {
     fill: #E35336;
 }
-#heartText {
+.heartText {
     font-size: 10rem;
     font-weight: 600;
 }
