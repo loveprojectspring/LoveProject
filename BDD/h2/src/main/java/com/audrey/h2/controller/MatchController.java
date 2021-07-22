@@ -15,20 +15,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.audrey.h2.entity.Lover;
-import com.audrey.h2.repository.LoverRepository;
+import com.audrey.h2.entity.Match;
+import com.audrey.h2.repository.MatchRepository;
 
 @RestController
 @RequestMapping("/api")
-public class LoverController {
 
+public class MatchController {
     @Autowired
-    LoverRepository loverRepo;
+    MatchRepository matchRepo;
 
-    @GetMapping("/lovers")
-    public ResponseEntity<List<Lover>> getAllLovers() {
+    @GetMapping("/matchs")
+    public ResponseEntity<List<Match>> getAllMatches() {
         try {
-            List<Lover> list = loverRepo.findAll();
+            List<Match> list = matchRepo.findAll();
 
             if (list.isEmpty() || list.size() == 0) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -40,32 +40,31 @@ public class LoverController {
         }
     }
 
-    @GetMapping("/lovers/{id}")
-    public ResponseEntity<Lover> getLover(@PathVariable Long id) {
-        Optional<Lover> lover = loverRepo.findById(id);
+    @GetMapping("/matchs/{id}")
+    public ResponseEntity<Match> getMatch(@PathVariable Long id) {
+        Optional<Match> match = matchRepo.findById(id);
 
-        if (lover.isPresent()) {
-            return new ResponseEntity<>(lover.get(), HttpStatus.OK);
+        if (match.isPresent()) {
+            return new ResponseEntity<>(match.get(), HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping("/lovers")
-    public ResponseEntity<Lover> saveLover(@RequestBody Lover lover) {
+    @PostMapping("/matchs")
+    public ResponseEntity<Match> saveMatch(@RequestBody Match match) {
         try {
-            return new ResponseEntity<>(loverRepo.save(lover), HttpStatus.CREATED);
+            return new ResponseEntity<>(matchRepo.save(match), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
-    @PutMapping("/lovers")
-    public ResponseEntity<Lover> updateLover(@RequestBody Lover lover) {
+    @PutMapping("/matchs")
+    public ResponseEntity<Match> updateMatch(@RequestBody Match match) {
         try {
-            return new ResponseEntity<>(loverRepo.save(lover), HttpStatus.OK);
+            return new ResponseEntity<>(matchRepo.save(match), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
-

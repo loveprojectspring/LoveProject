@@ -11,15 +11,22 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name="tbl_lover")
+@Table(name="tbl_match")
 @Setter
 @Getter
 @ToString
 
-public class Lover {
+public class Match {
+
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private Long id_lover;  // FK
+
+    private String percentage;
+
+    private String result;
+
+    private boolean bestMatch;
 }
