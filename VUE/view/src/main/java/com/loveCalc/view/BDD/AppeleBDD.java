@@ -29,10 +29,10 @@ public class AppeleBDD {
         List<Couple> listeDesCouples = new ArrayList<Couple>();
         /** Récuperer la liste des couples dans le body et l'inserer dans listeDesCouples **/
         
-        listeDesCouples.add(new Couple("1", "Clement", "michelMonBienAimé", "100", "Le plus beau de tout les couples"));
-        listeDesCouples.add(new Couple("2", "Jaques", "Eslam", "90", "Le plus beau"));
-        listeDesCouples.add(new Couple("3", "Nicolas", "SonChien", "80", "Le plus beau de tou"));
-        listeDesCouples.add(new Couple("4", "AUdrey", "Hugo", "200", "Du jamais vus !"));
+        listeDesCouples.add(new Couple("1", "Clement", "michelMonBienAimé", 100, "Le plus beau de tout les couples"));
+        listeDesCouples.add(new Couple("2", "Jaques", "Eslam", 90, "Le plus beau"));
+        listeDesCouples.add(new Couple("3", "Nicolas", "SonChien", 80, "Le plus beau de tou"));
+        listeDesCouples.add(new Couple("4", "AUdrey", "Hugo", 200, "Du jamais vus !"));
         
         
         return listeDesCouples;
