@@ -18,13 +18,14 @@ public class ApiService {
     private HttpHeaders httpHeaders;
     private HttpEntity<String> entity;
 
-    public Map getRequest(){
+
+    public Map getRequestApiExterne(String name1, String name2){
 
         restTemplate = new RestTemplate();
         httpHeaders = new HttpHeaders();
 
         /** Instance de la requête **/
-        Request request = new Request("https://love-calculator.p.rapidapi.com/getPercentage?fname=Michel&sname=Alice");
+        Request request = new Request("https://love-calculator.p.rapidapi.com/getPercentage?fname="+name1+"&sname="+name2);
         Request header1 = new Request("x-rapidapi-key", "d1165b9a98mshf4ea73ce820e691p1a2693jsnd70e37ec072a");
         Request header2 = new Request("x-rapidapi-host", "love-calculator.p.rapidapi.com");
 
