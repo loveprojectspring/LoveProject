@@ -18,10 +18,10 @@
 </header>
 <main>
   <div class="calc">
-    <form th:action="@{/match}" method="post">
-      <input type="text" name="firstPerson" placeholder="First Person">
-      <input type="text" name="secondPerson"  placeholder="Second Person">
-      <input type="submit" value="Check">
+    <form th:object="${couple}" th:action="@{/match/}" method="post">
+      <input type="text" th:field="*{firstPerson}" placeholder="First Person">
+      <input type="text" th:field="*{secondPerson}"  placeholder="Second Person">
+      <input th:type="submit" value="Check">
     </form>
   </div>
     <div class="result">
