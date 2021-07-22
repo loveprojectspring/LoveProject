@@ -1,0 +1,26 @@
+spring :
+ # main :
+  #  web-application-type : reactive
+  application:
+    name: gateway
+ # cloud:
+   # gateway:
+   #   routes:
+    #   - id: direct_route
+     #    uri: http://127.0.0.1:8080
+      #   predicates:
+       #   - Path=/realroute/**
+        # filters:
+         # - RewritePath=/realroute/(?<segment>.*), /sujet/$\{segment}
+     #  - id: lb_route
+      #   uri: lb://hugold
+       #  predicates:
+       #   - Path=/lbroute/**
+       #  filters:
+       #   - RewritePath=/lbroute/(?<segment>.*), /sujet/$\{segment}
+eureka :
+  client : 
+    service-url : 
+      defaultZone: http://localhost:8100/eureka
+server:
+  port: 8200
