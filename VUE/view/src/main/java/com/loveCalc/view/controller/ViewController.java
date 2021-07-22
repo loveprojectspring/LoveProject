@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/view")
+@RequestMapping("/")
 public class ViewController {
 
     @GetMapping
@@ -14,7 +14,7 @@ public class ViewController {
         return "home";
     }
 
-    @GetMapping("/couple/")
+    @GetMapping("/couple")
     public String coupleList(Model model) {
         return "couple";
     }
