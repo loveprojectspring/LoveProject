@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
+<header>
+    <img id="logo" th:src="@{/img/LogoLoveCalc.png}" alt="logo" >
+    <nav>
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{#}">Old Results</a>
 
+    </nav>
+</header>
+<main>
+    <div class="coupleList">
+        <table>
+            <th>First person</th>
+            <th>Second person</th>
+            <th>Percentage %</th>
+            <tr>
+                <td>Person1</td>
+                <td>Person2</td>
+                <td>93%</td>
+            </tr>
+        </table>
+    </div>
+</main>
+<footer>
+
+    <p>Copyrights© 2021 | Cefim students </p>
+</footer>
 </body>
 </html>
