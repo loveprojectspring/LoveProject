@@ -38,4 +38,12 @@ public class AppeleBDD {
         return listeDesCouples;
 
     }
+
+    public static Couple sendCoupleBdd(Couple couple){
+        /**
+         * Appel au micro service Bdd à venir
+         */
+
+        return couple;
+    }
 }

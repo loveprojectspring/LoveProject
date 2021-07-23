@@ -14,9 +14,9 @@ public class CallApiExterneController {
 
         /** Appel du micro service de l'API **/
         /** Test **/
-        requestService.addServiceApi("http://localhost:8600/response/Michel/Claudine");
+//        requestService.addServiceApi("http://localhost:8600/response/Michel/Claudine");
         /** Dynamic **/
-        //requestService.addServiceApi("http://localhost:8600/response/"+name1+"/"+name2);
+        requestService.addServiceApi("http://localhost:8600/response/"+name1+"/"+name2);
 
         /** Service result **/
         CoupleApi rsp = requestService.getResponse();
