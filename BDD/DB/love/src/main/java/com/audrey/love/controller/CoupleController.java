@@ -20,8 +20,8 @@ public class LoverController {
 
     list<Couple> couple = new ArrayList<Couple>();
 
-
-    public List<Couple> lesCouples(Couple couple) {
+    @GetMapping("/couple")
+    public List<Couple> getCouple(Couple couple) {
 
         couple.add('Clément', 'Clément', 99, 'Le centipède')
         couple.add('Mickey', 'Jef Bezos', 12, 'La magie de disney n\'opère pas ')
@@ -58,13 +58,6 @@ public class LoverController {
 
     }
 
-
-
-/*   wtf
-
-    public List<Couple> lesCouples(Couple couple){
-        couple.add(couple);
-    }*/
 
 
 }
