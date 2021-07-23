@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import static com.loveCalc.view.BDD.AppeleBDD.sendCoupleBdd;
 import static com.loveCalc.view.controller.CallApiExterneController.callServiceApi;
 
 @Controller
@@ -43,10 +44,12 @@ public class ViewController {
         String fname = couple.getFirstPerson();
         String sname = couple.getSecondPerson();
         couple =  callServiceApi(fname,sname);
-        System.out.println(couple);
+//        System.out.println(couple);
 
 
-        couples.add(couple);
+        sendCoupleBdd(couple);
+
+//        couples.add(couple);
         matched = couple;
         System.out.println(couple);
         return "redirect:/";
