@@ -3,38 +3,42 @@ package com.audrey.love.controller;
 import com.audrey.love.dto.LoverDTO;
 import com.audrey.love.entity.Lover;
 import com.audrey.love.service.LoverService;
+import com.audrey.love.service.MatchService;
+import com.audrey.love.vue.Couple;
 import javassist.NotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/couple")
-public class LoverController {
+public class CoupleController {
 
     @Autowired
     private MatchService matchService;
     @Autowired
     private LoverService loveService;
 
-    list<Couple> couple = new ArrayList<Couple>();
+    List<Couple> couples = new ArrayList<Couple>();
 
-    @GetMapping("/couple")
-    public List<Couple> getCouple(Couple couple) {
+    @GetMapping("/couples")
+    public List<Couple> getCouples(Couple couple) {
 
-        couple.add('Clément', 'Clément', 99, 'Le centipède')
-        couple.add('Mickey', 'Jef Bezos', 12, 'La magie de disney n\'opère pas ')
-        couple.add('Luke', 'Anakin', 99, 'Tant que ca reste en famille')
-        couple.add('RIRI', 'FIFI', 99, 'OUAH')
-        couple.add('LOULOU', 'POUTOU', 2, 'LOVE')
-        couple.add('Lama', 'Scarabet', 19, 'L\'amour est dans le prés')
-        couple.add("Chien", "Chat", 0, 'Les poilus')
-        couple.add('Eslam', 'Hugo', 20000, 'Spring power')
-        couple.add('Mathieu', 'Gateway', 99, 'Il faut passer par là')
+        couples.add(new Couple("1", "Clement", "michelMonBienAimé", 100, "Le plus beau de tout les couples"));
+        couples.add(new Couple("2", "Jaques", "Eslam", 90, "Le plus beau"));
+        couples.add(new Couple("3", "Nicolas", "SonChien", 80, "Le plus beau de tou"));
+        couples.add(new Couple("4", "AUdrey", "Michael", 200, "Du jamais vus !"));
+        couples.add(new Couple("5","Clément", "Clément", 99, "Le centipède"));
+        couples.add(new Couple("6", "Mickey", "Jef Bezos", 12, "La magie de disney n\\'opère pas"));
+        couples.add(new Couple("7", "Luke", "Anakin", 99, "Tant que ca reste en famille"));
+        couples.add(new Couple("8", "Lama", "Scarabet", 19, "L\\'amour est dans le prés"));
+        couples.add(new Couple("9", "Chien", "Chat", 0, "Les poilus"));
 
 
-        return couple;
+        return couples;
 
     /*    List<Match> matchs = matchService.getAll();
         List<Lover> lovers = loveService.getAll();

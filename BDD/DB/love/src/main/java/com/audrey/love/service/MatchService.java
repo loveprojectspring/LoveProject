@@ -29,8 +29,8 @@ public class MatchService {
         return newMatch;
     }
 
-    public List<Match> getMatch(Integer id) throws NotFoundException {
-        return repository.getMatch(id);
-    }
+//    public List<Match> getMatch(Integer id) throws NotFoundException {
+//        return repository.getMatch(id);
+//    }
     ////// K.O
 }

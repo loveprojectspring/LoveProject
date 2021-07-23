@@ -23,8 +23,8 @@ public class MatchController {
         return matchService.getAll();
     }
 
-    @GetMapping("/{id}")
-    public Match get(@PathVariable("id") Integer id) throws NotFoundException {
-        return matchService.getMatch(id);
-    }
+//    @GetMapping("/{id}")
+//    public Match get(@PathVariable("id") Integer id) throws NotFoundException {
+//        return matchService.getMatch(id);
+//    }
 }

@@ -1,8 +1,9 @@
 package com.loveCalc.view.controller;
 
-import com.loveCalc.view.Service.RequestService;
+
 import com.loveCalc.view.dto.Couple;
 import com.loveCalc.view.dto.CoupleApi;
+import com.loveCalc.view.service.RequestService;
 
 import java.io.IOException;
 

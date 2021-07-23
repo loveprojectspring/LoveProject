@@ -60,7 +60,11 @@ main {
     height: 80vh;
     flex-flow: column;
     color: #050505;
+    overflow: scroll;
+}
 
+.coupleList {
+    overflow: scroll;
 }
 
 .matched {

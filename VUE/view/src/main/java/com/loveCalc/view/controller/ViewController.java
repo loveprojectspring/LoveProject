@@ -22,7 +22,7 @@ import static com.loveCalc.view.controller.CallApiExterneController.callServiceA
 @RequestMapping("/")
 public class ViewController {
     Couple matched = new Couple();
-    List<Couple> couples =  AppeleBDD.getListCouple();
+    List<Couple> couples =  CallBDD.responseBDD();
 
     @GetMapping
     public String homePage(Model model) {
