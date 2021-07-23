@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad321b8b-2565-477e-a6ec-969c78c57122" name="Default Changelist" comment="JPP please 3">
+    <list default="true" id="ad321b8b-2565-477e-a6ec-969c78c57122" name="Default Changelist" comment="JPP please 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BDD/DB/love/src/main/java/com/audrey/love/controller/CoupleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BDD/DB/love/src/main/java/com/audrey/love/controller/CoupleController.java" afterDir="false" />
     </list>
@@ -82,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627031438901</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="JPP please 4">
+      <created>1627031825019</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1627031825019</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +111,7 @@
     <MESSAGE value="JPP please" />
     <MESSAGE value="JPP please 2" />
     <MESSAGE value="JPP please 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="JPP please 3" />
+    <MESSAGE value="JPP please 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="JPP please 4" />
   </component>
 </project>

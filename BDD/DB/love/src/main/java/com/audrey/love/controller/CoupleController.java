@@ -34,6 +34,8 @@ public class LoverController {
         couple.add('Mathieu', 'Gateway', 99, 'Il faut passer par là')
 
 
+                return couple;
+
     /*    List<Match> matchs = matchService.getAll();
         List<Lover> lovers = loveService.getAll();
         List<Couple> couples = new ArrayList<Couple>();
