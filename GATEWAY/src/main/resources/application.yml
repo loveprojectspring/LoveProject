@@ -3,27 +3,29 @@ spring :
   #  web-application-type : reactive
   application:
     name: gateway
- # cloud:
-   # gateway:
-   #   routes:
-    #   - id: Vue
-     #    uri: http://127.0.0.1:8400
-      #   predicates:
-       #   - Path=/Vue/**
-        # filters:
-         # - RewritePath=/Vue/(?<segment>.*), /sujet/$\{segment}
+  cloud:
+    gateway:
+      routes:
+       - id: api
+         uri: lb://api
+         predicates:
+          - Path=/response/**
+          
+       - id: Vue
+         uri: lb://Vue
+         predicates:
+          - Path=/**
+         filters:
+          - RewritePath=/Vue(?<segment>.*), /$\{segment}
      #  - id: BDD
       #   uri: lb://BDD
        #  predicates:
        #   - Path=/BDD/**
        #  filters:
        #   - RewritePath=/BDD/(?<segment>.*), /sujet/$\{segment}
-     #  - id: LoveAPI
-      #   uri: lb://LoveAPI
-       #  predicates:
-       #   - Path=/response/**
-       #  filters:
-       #   - RewritePath=/LoveAPI/(?<segment>.*), /sujet/$\{segment}
+
+        # filters:
+        #  - RewritePath=/LoveAPI/(?<segment>.*), /sujet/$\{segment}
 eureka :
   client : 
     service-url : 
