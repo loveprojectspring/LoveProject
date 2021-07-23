@@ -15,5 +15,8 @@ public class LoverController {
 
     list<Couple> couple = new ArrayList<Couple>();
 
+    public void add(Couple couple){
+        couple.add(couple);
+    }
 
 }
