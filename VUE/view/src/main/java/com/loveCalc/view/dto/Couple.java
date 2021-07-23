@@ -20,7 +20,7 @@ public class Couple {
 
     private String secondPerson;
 
-    private String percentage;
+    private int percentage;
 
     private String resultMessage;
 
@@ -49,11 +49,11 @@ public class Couple {
         this.secondPerson = secondPerson;
     }
 
-    public String getPercentage() {
+    public int getPercentage() {
         return percentage;
     }
 
-    public void setPercentage(String percentage) {
+    public void setPercentage(int percentage) {
         this.percentage = percentage;
     }
 

@@ -18,4 +18,6 @@ public class ViewController {
     public String coupleList(Model model) {
         return "couple";
     }
-}
+
+    }
+
