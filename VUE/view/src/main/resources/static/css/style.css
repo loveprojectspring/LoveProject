@@ -63,9 +63,6 @@ main {
     overflow: scroll;
 }
 
-.coupleList {
-    overflow: scroll;
-}
 
 .matched {
     display: flex;
@@ -107,8 +104,9 @@ p {
 .coupleList {
     display: flex;
     width: 90vw;
-    align-items: center;
+    align-items: end;
     justify-content: center;
+    overflow: scroll;
 }
 
 
@@ -116,6 +114,8 @@ p {
     width: 50%;
     text-align: left;
     border: 1px solid black;
+    margin: 5rem 0rem;
+
 }
 table td, table th {
     padding:2rem;
