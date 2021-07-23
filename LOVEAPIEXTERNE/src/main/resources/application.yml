@@ -1,9 +1,9 @@
-server.port: 8500
-spring.cloud.config.enabled: false
+server:
+  port: 8600
 eureka :
   client : 
     service-url : 
       defaultZone: http://localhost:8100/eureka
 spring :
   application:
-    name: Vue
+    name: api
