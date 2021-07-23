@@ -10,9 +10,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import static com.loveCalc.view.controller.CallApiExterneController.callServiceApi;
 
 @Controller
 @RequestMapping("/")
@@ -35,15 +38,13 @@ public class ViewController {
     }
 
     @PostMapping(value = "/match/", consumes = MediaType.ALL_VALUE)
-    public String makeMatch(Couple couple){
+    public String makeMatch(Couple couple) throws IOException {
 
-        Random r = new Random();
-        int low = 10;
-        int high = 100;
-        int result = r.nextInt(high-low) + low;
+        String fname = couple.getFirstPerson();
+        String sname = couple.getSecondPerson();
+        couple =  callServiceApi(fname,sname);
+        System.out.println(couple);
 
-
-        couple.setPercentage(result);
 
         couples.add(couple);
         matched = couple;
